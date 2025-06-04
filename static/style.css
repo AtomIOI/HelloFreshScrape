@@ -137,3 +137,15 @@ pre#jsonDataOutput {
     margin-bottom: 10px;
     display: block; /* Make it a block to position it easily above the pre */
 }
+
+/* static/style.css - Add this or modify existing styles */
+.json-actions {
+    display: flex; /* Arrange buttons in a row */
+    gap: 10px;     /* Space between buttons */
+    margin-bottom: 10px; /* Space below the buttons */
+}
+
+/* Ensure buttons take up their own width or adjust as needed */
+.json-actions button {
+    /* display: inline-block; */ /* Already set by default for button */
+}

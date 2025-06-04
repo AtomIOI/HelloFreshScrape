@@ -30,10 +30,11 @@
                 </div>
 
             <h3>Raw JSON Output:</h3>
-            <button id="copyJsonButton">Copy JSON</button>
+            <div class="json-actions">
+                <button id="copyJsonButton">Copy JSON</button>
+                <button id="downloadJsonButton">Download JSON</button> </div>
             <pre id="jsonDataOutput"></pre>
         </div>
-
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
