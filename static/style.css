@@ -1,0 +1,139 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    color: #007a33; /* HelloFresh Green */
+}
+
+
+.disclaimer {
+    background-color: #fff3cd; /* Light yellow */
+    color: #856404; /* Dark yellow text */
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+.disclaimer strong {
+    color: #665104;
+}
+
+
+.input-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-section label {
+    font-weight: bold;
+}
+
+.input-section input[type="url"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-section button, #copyJsonButton {
+    padding: 10px 15px;
+    background-color: #007a33; /* HelloFresh Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover, #copyJsonButton:hover {
+    background-color: #005c29; /* Darker green */
+}
+
+#statusArea {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#statusMessage.error {
+    color: #D8000C; /* Red for errors */
+    background-color: #FFD2D2; /* Light red background */
+}
+#statusMessage.success {
+    color: #2F855A; /* Green for success */
+    background-color: #C6F6D5; /* Light green background */
+}
+
+
+#resultsArea {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+#structuredData h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #005c29;
+}
+
+#structuredData ul, #structuredData ol {
+    padding-left: 20px;
+}
+#structuredData li {
+    margin-bottom: 5px;
+}
+
+#structuredData .ingredient-item, #structuredData .nutrition-item {
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: #eef;
+    border-radius: 3px;
+}
+
+
+pre#jsonDataOutput {
+    background: #272822; /* Monokai-like background */
+    color: #f8f8f2;     /* Light text */
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;   /* Scroll for long lines */
+    white-space: pre-wrap; /* Wrap long lines */
+    word-wrap: break-word;
+    font-size: 0.9em;
+    max-height: 400px; /* Limit height and make scrollable */
+}
+
+#copyJsonButton {
+    margin-bottom: 10px;
+    display: block; /* Make it a block to position it easily above the pre */
+}

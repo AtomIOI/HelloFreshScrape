@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloFresh Recipe Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>HelloFresh Recipe Scraper 🍲</h1>
+
+        <div class="disclaimer">
+            <p><strong>Important Note:</strong> {{ disclaimer }}</p>
+        </div>
+
+        <div class="input-section">
+            <label for="recipeUrl">Enter HelloFresh Recipe URL:</label>
+            <input type="url" id="recipeUrl" name="recipeUrl" placeholder="https://www.hellofresh.com/recipes/...">
+            <button id="scrapeButton">Scrape Recipe</button>
+        </div>
+
+        <div id="statusArea">
+            <p id="statusMessage">Enter a URL and click "Scrape Recipe".</p>
+        </div>
+
+        <div id="resultsArea" style="display:none;">
+            <h2>Scraped Recipe Data:</h2>
+            <div id="structuredData">
+                </div>
+
+            <h3>Raw JSON Output:</h3>
+            <button id="copyJsonButton">Copy JSON</button>
+            <pre id="jsonDataOutput"></pre>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
