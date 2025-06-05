@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data.ingredients && data.ingredients.length > 0) {
             html += `<h4>Ingredients:</h4><ul>`;
             data.ingredients.forEach(ing => {
-                //let ing AllergensText = "";
+                let ingAllergensText = "";
                 if (ing.allergens_in_item && ing.allergens_in_item.length > 0) {
                     ingAllergensText = ` <small>(Contains: ${ing.allergens_in_item.join(', ')})</small>`;
                 }
