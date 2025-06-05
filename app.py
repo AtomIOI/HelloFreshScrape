@@ -57,10 +57,10 @@ def handle_scrape_recipe():
             # Return a 500 for server-side scraping issues, or 400/404 if it's client related
             # Based on error content, status code might change.
             # e.g. if scraper_data['error'] contains "404", maybe return 404
-            return jsonify(scraped_data), 500 # Or a more specific error code
+            return jsonify([scraped_data]), 500 # Or a more specific error code
         
         logger.info(f"Successfully scraped data for {recipe_url}")
-        return jsonify(scraped_data), 200
+        return jsonify([scraped_data]), 200
     except Exception as e:
         logger.critical(f"An unexpected error occurred during scraping process for {recipe_url}: {e}", exc_info=True)
         return jsonify({"error": "An unexpected server error occurred. Please check server logs."}), 500
