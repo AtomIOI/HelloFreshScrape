@@ -5,7 +5,6 @@ from flask_cors import CORS # For allowing frontend requests from a different po
 
 # Assuming scraper.py is in the same directory
 from scraper import scrape_recipe_data 
-from recipe_selectors import DISCLAIMER # Import disclaimer to pass to template
 
 app = Flask(__name__)
 CORS(app) # Enable CORS for all routes
@@ -17,15 +16,11 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(name)s - %(threadName)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# --- General Disclaimer (already in selectors.py, also good to have here) ---
-# This is also passed to the frontend template.
-APP_DISCLAIMER = DISCLAIMER 
-
 # --- Routes ---
 @app.route('/')
 def index():
     """Serves the main HTML page."""
-    return render_template('index.html', disclaimer=APP_DISCLAIMER)
+    return render_template('index.html')
 
 @app.route('/scrape-recipe', methods=['POST'])
 def handle_scrape_recipe():

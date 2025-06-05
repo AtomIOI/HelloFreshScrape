@@ -10,9 +10,6 @@
     <div class="container">
         <h1>HelloFresh Recipe Scraper 🍲</h1>
 
-        <div class="disclaimer">
-            <p><strong>Important Note:</strong> {{ disclaimer }}</p>
-        </div>
 
         <div class="input-section">
             <label for="recipeUrl">Enter HelloFresh Recipe URL:</label>
@@ -25,15 +22,15 @@
         </div>
 
         <div id="resultsArea" style="display:none;">
-            <h2>Scraped Recipe Data:</h2>
-            <div id="structuredData">
-                </div>
-
             <h3>Raw JSON Output:</h3>
             <div class="json-actions">
                 <button id="copyJsonButton">Copy JSON</button>
-                <button id="downloadJsonButton">Download JSON</button> </div>
+                <button id="downloadJsonButton">Download JSON</button>
+            </div>
             <pre id="jsonDataOutput"></pre>
+
+            <h2>Scraped Recipe Data:</h2>
+            <div id="structuredData"></div>
         </div>
     </div>
 

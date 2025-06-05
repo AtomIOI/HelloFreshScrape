@@ -8,7 +8,7 @@ import re
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 
-from recipe_selectors import SELECTORS, USER_AGENTS, REQUEST_DELAY_SECONDS, MAX_RETRIES, RETRY_BACKOFF_FACTOR, DISCLAIMER
+from recipe_selectors import SELECTORS, USER_AGENTS, REQUEST_DELAY_SECONDS, MAX_RETRIES, RETRY_BACKOFF_FACTOR
 from utils import clean_text, parse_duration_to_minutes, parse_ingredient_strings_list, parse_step_strings_list, extract_allergens_from_text
 
 logger = logging.getLogger(__name__)
@@ -133,8 +133,7 @@ def scrape_recipe_data(recipe_url):
     
     scraped_data = {
         "source_url": recipe_url,
-        "scraped_at_timestamp": datetime.now(timezone.utc).isoformat(),
-        "disclaimer": DISCLAIMER
+        "scraped_at_timestamp": datetime.now(timezone.utc).isoformat()
     }
 
     def get_value(field_key, cleaning_func=clean_text, is_list=False, 

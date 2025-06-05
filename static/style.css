@@ -59,7 +59,7 @@ h1 {
     border-radius: 4px;
 }
 
-.input-section button, #copyJsonButton {
+.input-section button, #copyJsonButton, #downloadJsonButton {
     padding: 10px 15px;
     background-color: #007a33; /* HelloFresh Green */
     color: white;
@@ -134,6 +134,11 @@ pre#jsonDataOutput {
 }
 
 #copyJsonButton {
+    margin-bottom: 10px;
+    display: block; /* Make it a block to position it easily above the pre */
+}
+
+#downloadJsonButton {
     margin-bottom: 10px;
     display: block; /* Make it a block to position it easily above the pre */
 }

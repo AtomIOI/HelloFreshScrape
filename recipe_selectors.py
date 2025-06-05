@@ -14,8 +14,6 @@ CSS selectors are used as fallbacks or for data not present in JSON-LD.
 """
 import re
 
-# General Disclaimer
-DISCLAIMER = "Important Note: Web scraping can violate the Terms of Service (ToS) of websites, including HelloFresh. This application is developed for educational and demonstrational purposes only. Always review and respect the ToS of any website before attempting to scrape it. Proceed responsibly and at your own risk. This tool does not endorse or encourage activities that violate website ToS."
 
 # --- JSON-LD Path Definitions & CSS Fallbacks ---
 # For each field, we'll define a 'json_ld_path' if applicable.
